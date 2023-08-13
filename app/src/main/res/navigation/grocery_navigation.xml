@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/groceryListFragment">
+
+    <fragment
+        android:id="@+id/groceryListFragment"
+        android:name="com.benenesyildirim.grocerylist.presentation.listing.GroceryListFragment"
+        android:label="fragment_grocery_list"
+        tools:layout="@layout/fragment_grocery_list" >
+        <action
+            android:id="@+id/action_groceryListFragment_to_groceryDetailFragment"
+            app:destination="@id/groceryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groceryDetailFragment"
+        android:name="com.benenesyildirim.grocerylist.presentation.detail.GroceryDetailFragment"
+        android:label="fragment_grocery_detail"
+        tools:layout="@layout/fragment_grocery_detail" />
+</navigation>
